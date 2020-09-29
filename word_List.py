@@ -10,7 +10,6 @@ while True:
     for i in char_input:
       char_List.append(i)
 
-n = len(char_List)
 word = ''
 word_List = set()
 
