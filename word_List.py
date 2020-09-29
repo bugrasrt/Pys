@@ -29,7 +29,7 @@ def list_order(input_List):
     return sorted_List
 
 def file_create(input_List):
-    file = open(r'C:/Users/Bugra/Desktop/my_word_List.txt', 'a+')
+    file = open(r'The File Path You Want to Write', 'a+')
     file.write('####New List####\n')
     for word in input_List:
           file.write(f'{word}\n')
