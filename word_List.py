@@ -1,28 +1,29 @@
-import itertools
+from itertools import permutations
 
-char_List= []
 while True:
-  char_input = input('(For stop, enter 0!) Char: ')
-  if char_input == '0':
-    print(f'Char List: {char_List}')
-    break
-  else:
-    for i in char_input:
-      char_List.append(i)
+    words = input('Enter the words(For exit, enter 0): ')
+    if words == '0':
+        exit(1)
+    else:
+        char_List = [char for char in words]
 
-word = ''
-word_List = set()
-
-for xs in itertools.permutations(char_List):
-    word += ''.join(xs)
-    word_List.add(word)
     word = ''
+    word_List = set()
 
-def order(liste):
-    liste = list(liste)
-    liste.sort()
-    for i in liste:
-      print(i)
+    for xs in permutations(char_List):
+        word += ''.join(xs)
+        word_List.add(word)
+        word = ''
 
-order(word_List)
-exit = input('For exit press a button...')
+    def order(liste):
+        liste = list(liste)
+        liste.sort()
+        for i in liste:
+          print(i)
+
+    order(word_List)
+    cikis = input('For exit enter 0, otherwise press any key: ')
+    if cikis == '0':
+        exit(1)
+    else:
+        pass
