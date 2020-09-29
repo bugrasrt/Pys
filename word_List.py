@@ -1,11 +1,12 @@
 from itertools import permutations
 
+# Enter several word or letter then it will create unique words then sort it.
 while True:
     words = input('Enter the words(For exit, enter 0): ')
     if words == '0':
-        exit(1)
+        break
     else:
-        char_List = [char for char in words]
+        char_List = [char if char != ' ' else '' for char in words]
 
     word = ''
     word_List = set()
@@ -15,15 +16,16 @@ while True:
         word_List.add(word)
         word = ''
 
-    def order(liste):
-        liste = list(liste)
-        liste.sort()
-        for i in liste:
-          print(i)
+    def order(input_List):
+        sorted_List = list(input_List)
+        sorted_List.sort()
+        for word in sorted_List:
+          print(word)
 
     order(word_List)
-    cikis = input('For exit enter 0, otherwise press any key: ')
-    if cikis == '0':
-        exit(1)
+    
+    exit = input('For exit enter 0, otherwise press any key: ')
+    if exit == '0':
+        break
     else:
         pass
