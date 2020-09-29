@@ -25,4 +25,4 @@ def order(liste):
       print(i)
 
 order(word_List)
-cikis = input('For exit press a button...')
+exit = input('For exit press a button...')
