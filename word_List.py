@@ -1,6 +1,6 @@
 from itertools import permutations
 
-# Enter several word or letter then it will create unique words then sort it.
+# Enter several word or letter then it will create unique words and sort it.
 # You can write it to your txt file
 
 def word_create():
